@@ -10,18 +10,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.MalformedURLException;
 
-import static config.environment.driver;
-import static config.environment.wait;
+import config.environment;
 
-public class home {
+public class home extends environment{
 
     pageHome pageHome = new pageHome();
 
-    @When("user click Create New Company")
-    public void user_click_create_new_company() {
+    @Given("user in page Home")
+    public void user_in_page_home() {
         wait.until(
                 ExpectedConditions.visibilityOfElementLocated(pageHome.getBtn_createcompany())
         );
+    }
+    @When("user click Create New Company")
+    public void user_click_create_new_company() {
         driver.findElement(pageHome.getBtn_createcompany()).click();
     }
     @And("user input field name")
