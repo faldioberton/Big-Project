@@ -1,27 +1,19 @@
 package Stepdefinition;
 
 import config.environment;
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
-import objekrepository.pageLogin;
 import org.junit.After;
 import io.cucumber.java.Before;
-import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.concurrent.TimeUnit;
-
-import static config.environment.*;
 
 public class hook extends environment{
     login login = new login();
     @Before
-    public void before() throws MalformedURLException {
+    public void before() throws MalformedURLException, InterruptedException {
         capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName", "Realme");
         capabilities.setCapability("udid", "bfb80eb1");
@@ -36,7 +28,9 @@ public class hook extends environment{
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, duration);
         login.user_in_home_page();
-        login.user_click_skip();
+        login.user_click_yes();
+        login.user_swipe_horizontal();
+        login.user_found_button_sign_in();
         login.user_click_check_box();
         login.user_click_sign_in();
         login.user_click_sign_in_with_google_account();

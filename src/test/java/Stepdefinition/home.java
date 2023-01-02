@@ -6,10 +6,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import objekrepository.pageHome;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.net.MalformedURLException;
-
 import config.environment;
 
 public class home extends environment{
@@ -52,7 +48,7 @@ public class home extends environment{
     public void user_successfully_create_company() {
         wait.until(
                 ExpectedConditions.visibilityOfElementLocated(pageHome.getBtn_notif())
-        ).isDisplayed();
+        );
         driver.findElement(pageHome.getBtn_cancel()).click();
     }
 
