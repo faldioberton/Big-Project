@@ -6,7 +6,7 @@ Feature: Board
     Then user in page Company
     And user open ones team
     Then user in page Team
-    And user click feature board
+    When user click feature board
     Then user in page Board
     When user click add button
     Then user input field new list

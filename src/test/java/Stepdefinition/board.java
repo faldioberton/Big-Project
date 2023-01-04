@@ -26,7 +26,7 @@ public class board extends environment{
                 ExpectedConditions.visibilityOfElementLocated(pageBoard.getPage_team())
         );
     }
-    @Then("user click feature board")
+    @When("user click feature board")
     public void user_click_feature_board() {
         driver.findElement(pageBoard.getBtn_board()).click();
     }
