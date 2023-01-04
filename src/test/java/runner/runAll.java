@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/feature/home.feature",
+        features = "src/test/resources/feature/team.feature",
         glue = "Stepdefinition",
         plugin = "html:target/HTML_report.html"
 )
-public class runHome {
+public class runAll {
 }

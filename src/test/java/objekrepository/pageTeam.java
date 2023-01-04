@@ -1,8 +1,10 @@
 package objekrepository;
 
 import org.openqa.selenium.By;
+import Directory.datafile;
 
 public class pageTeam {
+    datafile datafile = new datafile();
 
     By btn_plus = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.widget.Button");
     By btn_addteam = By.xpath("//android.view.View[@content-desc=\"Add new team\"]");
@@ -11,6 +13,7 @@ public class pageTeam {
     By btn_createbutton = By.xpath("//android.widget.Button[@content-desc=\"Create\"]");
     By success_button = By.xpath("//android.widget.Button[@content-desc=\"Batch 16\n" +
             "Good\"]");
+    By btn_company = By.xpath("//android.view.View[contains(@content-desc,'" + datafile.getName_companies()+"')]");
 
     public By getBtn_createbutton() {
         return btn_createbutton;
@@ -34,5 +37,8 @@ public class pageTeam {
 
     public By getSuccess_button() {
         return success_button;
+    }
+    public By getBtn_company() {
+        return btn_company;
     }
 }

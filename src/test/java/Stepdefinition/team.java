@@ -12,11 +12,19 @@ public class team extends environment{
 
     pageTeam pageTeam = new pageTeam();
 
-    @Given("user in board Companies")
-    public void user_in_board_companies() {
+    @Given("user in page Company")
+    public void user_in_page_company() {
         wait.until(
                 ExpectedConditions.visibilityOfElementLocated(pageTeam.getBtn_plus())
         );
+    }
+    @When("user open ones company")
+    public void user_open_ones_company() {
+        driver.findElement(pageTeam.getBtn_company());
+                wait.until(
+                        ExpectedConditions.elementToBeClickable(pageTeam.getBtn_company())
+                        );
+        driver.findElement(pageTeam.getBtn_company()).click();
     }
     @When("user click icon plus")
     public void user_click_icon_plus() {

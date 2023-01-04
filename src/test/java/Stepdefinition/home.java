@@ -37,7 +37,7 @@ public class home extends environment{
                 ExpectedConditions.visibilityOfElementLocated(pageHome.getField_desc())
         );
         driver.findElement(pageHome.getField_desc()).click();
-        String input = "Batch 16";
+        String input = "Belajar";
         driver.findElement(pageHome.getField_desc()).sendKeys(input);
     }
     @And("user click create")
@@ -51,6 +51,5 @@ public class home extends environment{
         );
         driver.findElement(pageHome.getBtn_cancel()).click();
     }
-
 }
 
