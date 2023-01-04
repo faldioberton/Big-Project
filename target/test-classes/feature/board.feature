@@ -1,20 +1,14 @@
 Feature: Board
 
-  Scenario: Ensure user create new company
+  Scenario: Ensure user add feature board
     Given user in page Home
-    When user click Create New Company
-    And user input field name
-    And user input field description
-    And user click create
-    Then user successfully create company
-    Given user in board Companies
-    When user click icon plus
-    And user click add new team
-    And user input field_name
-    And user input field_description
-    And user click create button
-    Then user successfully create team
-    Given user in board Companies
-    When user click box team
-    And user click Board
-    And user click icon plus
+    When user open ones company
+    Then user in page Company
+    And user open ones team
+    Then user in page Team
+    And user click feature board
+    Then user in page Board
+    When user click add button
+    Then user input field new list
+    And user click submit
+    Then user successfully add board

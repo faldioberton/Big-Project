@@ -12,8 +12,8 @@ public class team extends environment{
 
     pageTeam pageTeam = new pageTeam();
 
-    @Given("user in page Company")
-    public void user_in_page_company() {
+    @Then("user in page Company")
+    public void user_in_board_company() {
         wait.until(
                 ExpectedConditions.visibilityOfElementLocated(pageTeam.getBtn_plus())
         );

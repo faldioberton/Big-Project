@@ -1,12 +1,14 @@
 package objekrepository;
 
 import org.openqa.selenium.By;
+import Directory.datafile;
 
 public class pageBoard {
-    By btn_team = By.xpath("//android.widget.Button[@content-desc=\"Batch 16\n" + "Good\"]");
+    datafile datafile = new datafile();
     By btn_board = By.xpath("//android.widget.ImageView[@content-desc=\"Board\"]");
     By field_list = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.widget.EditText");
     By btn_submit = By.xpath("//android.widget.Button[@content-desc=\"Submit\"]");
+    By btn_list = By.xpath("//android.view.View[@content-desc=\"Project Besar\"]");
     By btn_addnewcard = By.xpath("//android.widget.Button[@content-desc=\"Add new card\"]");
     By btn_meatballs = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]");
     By btn_archiveall = By.xpath("//android.view.View[@content-desc=\"Archive all cards in this list\"]");
@@ -25,6 +27,9 @@ public class pageBoard {
     By icon_archive = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[3]");
     By icon_arrowdown = By.xpath("//android.widget.Button[@content-desc=\"Board\"]");
     By btn_blast = By.xpath("//android.view.View[@content-desc=\"Blast\"]");
+    By btn_team = By.xpath("//android.widget.Button[contains(@content-desc,'" + datafile.getName_team()+"')]");
+    By page_team = By.xpath("//android.view.View[@content-desc=\"Batch 16\"]");
+    By add_button = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.widget.Button");
 
 
     public By getBtn_team() {
@@ -113,5 +118,17 @@ public class pageBoard {
 
     public By getIcon_filter() {
         return icon_filter;
+    }
+
+    public By getPage_team() {
+        return page_team;
+    }
+
+    public By getBtn_list() {
+        return btn_list;
+    }
+
+    public By getAdd_button() {
+        return add_button;
     }
 }
