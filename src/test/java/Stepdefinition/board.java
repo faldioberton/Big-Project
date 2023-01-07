@@ -4,6 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import objekrepository.pageBoard;
+import objekrepository.pageLogin;
 import objekrepository.pageTeam;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import config.environment;
@@ -11,6 +12,8 @@ import config.environment;
 public class board extends environment{
 
     pageBoard pageBoard = new pageBoard();
+
+    pageLogin pageLogin = new pageLogin();
 
     @Then("user open ones team")
     public void user_open_ones_team() {

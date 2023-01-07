@@ -1,6 +1,6 @@
 Feature: Home
 
-  Scenario: Ensure user create new company
+  Scenario: 1.Ensure user create new company
     Given user in page Home
     When user click Create New Company
     And user input field name

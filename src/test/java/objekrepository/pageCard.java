@@ -17,7 +17,7 @@ public class pageCard {
     By btn_copycard = By.xpath("//android.widget.Button[@content-desc=\"Copy card\"]");
     By btn_archivedcard = By.xpath("//android.widget.Button[@content-desc=\"Archive card\"]");
     By btn_setcard = By.xpath("//android.widget.Button[@content-desc=\"Set card to private\"]");
-    By icon_filter = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]");
+
     By icon_archive = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[3]");
     By icon_arrowdown = By.xpath("//android.widget.Button[@content-desc=\"Board\"]");
     By btn_successcard = By.xpath("//android.widget.Button[@content-desc=\"Progress\n" +
@@ -86,9 +86,7 @@ public class pageCard {
         return icon_arrowdown;
     }
 
-    public By getIcon_filter() {
-        return icon_filter;
-    }
+
 
     public By getBtn_successcard() {
         return btn_successcard;

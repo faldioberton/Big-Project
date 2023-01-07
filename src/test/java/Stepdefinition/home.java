@@ -15,7 +15,7 @@ public class home extends environment{
     @Given("user in page Home")
     public void user_in_page_home() {
         wait.until(
-                ExpectedConditions.visibilityOfElementLocated(pageHome.getBtn_createcompany())
+                ExpectedConditions.visibilityOfElementLocated(pageHome.getPage_home())
         );
     }
     @When("user click Create New Company")

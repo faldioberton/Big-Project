@@ -28,6 +28,9 @@ public class team extends environment{
     }
     @When("user click icon plus")
     public void user_click_icon_plus() {
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(pageTeam.getBtn_plus())
+        );
         driver.findElement(pageTeam.getBtn_plus()).click();
     }
     @When("user click add new team")

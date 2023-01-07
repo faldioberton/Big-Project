@@ -11,8 +11,7 @@ public class pageHome {
     By btn_create = By.xpath("//android.widget.Button[@content-desc=\"Create\"]");
     By btn_notif = By.xpath("//android.view.View[@content-desc=\"Successfully create company user\"]");
     By btn_cancel = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[2]/android.widget.Button");
-    By page_home = By.xpath("//android.view.View[@content-desc=\"Home\n" +
-            "Tab 1 of 4\"]");
+    By page_home = By.xpath("//android.widget.ImageView[@content-desc='logo']");
     By icon_home = By.xpath("//android.view.View[@content-desc=\"SekolahQA\"]");
 
     public By getBtn_cancel() {
