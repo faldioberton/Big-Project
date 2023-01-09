@@ -1,5 +1,7 @@
 package Stepdefinition;
 
+import Directory.Api;
+import Directory.datafile;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,6 +13,8 @@ import config.environment;
 public class home extends environment{
 
     pageHome pageHome = new pageHome();
+    Api api = new Api();
+    datafile datafile = new datafile();
 
     @Given("user in page Home")
     public void user_in_page_home() {
@@ -28,8 +32,9 @@ public class home extends environment{
                 ExpectedConditions.visibilityOfElementLocated(pageHome.getField_name())
         );
         driver.findElement(pageHome.getField_name()).click();
-        String input = "SekolahQA";
-        driver.findElement(pageHome.getField_name()).sendKeys(input);
+        String companyName = api.getCompanyName();
+        driver.findElement(pageHome.getField_name()).sendKeys(companyName);
+
     }
     @And("user input field description")
     public void user_input_field_description() {

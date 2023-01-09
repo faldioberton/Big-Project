@@ -1,4 +1,4 @@
-package org.example;
+package api;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -19,7 +19,7 @@ public class bastes {
         payload.put("desc", "descc");
         payload.put("type", "team");
 
-        String token = "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYzNDZjZDRiNjk5YmMwNDg3MWE3NmNjMyIsImdvb2dsZUlkIjoiMTAzNzQzNzUyNjc5NDk3MTEzNzc0IiwiZW1haWwiOiJmYWxkaW9iZXJ0b24xN0BnbWFpbC5jb20iLCJmdWxsTmFtZSI6IkZhbGRpIE9iZXJ0b24iLCJwaG90b1VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FMbTV3dTIwSVJ3RFBMbkxpcnowR1FvZUxmbDlET1pVM1FyYnQ0NlBYUmQ4aVE9czk2LWMiLCJiaW8iOiIiLCJzdGF0dXMiOiIiLCJjcmVhdGVkQXQiOiIyMDIyLTEwLTEyVDE0OjIwOjU5LjA3MVoiLCJ1cGRhdGVkQXQiOiIyMDIyLTExLTI1VDE0OjQxOjAwLjc3MFoiLCJfX3YiOjAsImRlZmF1bHRDb21wYW55IjpudWxsfSwiaWF0IjoxNjcxNDU3NjI2LCJleHAiOjE2NzQwNDk2MjZ9.-DvJCwNOVw3OhjRE0oQSJaoGQEUWpMt32dMhdPCGgbU";
+        String token = "jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImRlZmF1bHRDb21wYW55IjpudWxsLCJfaWQiOiI2MzQ2Y2Q0YjY5OWJjMDQ4NzFhNzZjYzMiLCJnb29nbGVJZCI6IjEwMzc0Mzc1MjY3OTQ5NzExMzc3NCIsImVtYWlsIjoiZmFsZGlvYmVydG9uMTdAZ21haWwuY29tIiwiZnVsbE5hbWUiOiJGYWxkaSBPYmVydG9uIiwicGhvdG9VcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BTG01d3UyMElSd0RQTG5MaXJ6MEdRb2VMZmw5RE9aVTNRcmJ0NDZQWFJkOGlRPXM5Ni1jIiwiYmlvIjoiIiwic3RhdHVzIjoiIiwiY29tcGFuaWVzIjpbXSwiY3JlYXRlZEF0IjoiMjAyMi0xMC0xMlQxNDoyMDo1OS4wNzFaIiwidXBkYXRlZEF0IjoiMjAyMy0wMS0wN1QwNDowNToyMy4zOTFaIiwiX192IjowfSwiaWF0IjoxNjczMDY0MzIzLCJleHAiOjE2NzU2NTYzMjN9.KsQk14V522g8LlHD9M2BSw_4wYhKdjjyMu4nY01YIrg";
 
 
         Response response = given()
@@ -27,7 +27,7 @@ public class bastes {
                 .header("Content-Type", "application/json")
                 .header("Authorization", token)
                 .body(payload.toJSONString())
-                .post("/src/main/api/v1/teams?companyId=61eba2c85080f47b25ddc8f8")
+                .post("/api/v1/teams?companyId=61eba2c85080f47b25ddc8f8")
                 .then()
                 .log().body()
                 .statusCode(200)
