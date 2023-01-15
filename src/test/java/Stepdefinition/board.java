@@ -41,16 +41,25 @@ public class board extends environment{
     }
     @When("user click add button")
     public void user_click_add_button() {
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(pageBoard.getAdd_button())
+        );
         driver.findElement(pageBoard.getAdd_button()).click();
     }
     @Then("user input field new list")
     public void user_input_field_new_list() {
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(pageBoard.getField_list())
+        );
         driver.findElement(pageBoard.getField_list()).click();
         String input = "Project Besar";
         driver.findElement(pageBoard.getField_list()).sendKeys(input);
     }
     @Then("user click submit")
     public void user_click_submit() {
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(pageBoard.getBtn_submit())
+        );
         driver.findElement(pageBoard.getBtn_submit()).click();
     }
     @Then("user successfully add board")

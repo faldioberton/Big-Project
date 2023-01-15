@@ -1,6 +1,5 @@
 package Stepdefinition;
 
-import Directory.Api;
 import Directory.datafile;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -13,7 +12,6 @@ import config.environment;
 public class home extends environment{
 
     pageHome pageHome = new pageHome();
-    Api api = new Api();
     datafile datafile = new datafile();
 
     @Given("user in page Home")
@@ -32,7 +30,7 @@ public class home extends environment{
                 ExpectedConditions.visibilityOfElementLocated(pageHome.getField_name())
         );
         driver.findElement(pageHome.getField_name()).click();
-        String companyName = api.getCompanyName();
+        String companyName = "Sekolah QA";
         driver.findElement(pageHome.getField_name()).sendKeys(companyName);
 
     }
@@ -42,8 +40,8 @@ public class home extends environment{
                 ExpectedConditions.visibilityOfElementLocated(pageHome.getField_desc())
         );
         driver.findElement(pageHome.getField_desc()).click();
-        String input = "Belajar";
-        driver.findElement(pageHome.getField_desc()).sendKeys(input);
+        String Description = "Belajar";
+        driver.findElement(pageHome.getField_desc()).sendKeys(Description);
     }
     @And("user click create")
     public void user_click_create() {

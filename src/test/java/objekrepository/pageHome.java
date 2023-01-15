@@ -12,7 +12,7 @@ public class pageHome {
     By btn_notif = By.xpath("//android.view.View[@content-desc=\"Successfully create company user\"]");
     By btn_cancel = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[2]/android.widget.Button");
     By page_home = By.xpath("//android.widget.ImageView[@content-desc='logo']");
-    By icon_home = By.xpath("//android.view.View[@content-desc=\"SekolahQA\"]");
+    By icon_home = By.xpath("//android.widget.ImageView[@content-desc=\"Cicle Logo\"]");
 
     public By getBtn_cancel() {
         return btn_cancel;

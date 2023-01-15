@@ -63,6 +63,6 @@ public class team extends environment{
     public void user_successfully_create_team() {
         wait.until(
                 ExpectedConditions.visibilityOfElementLocated(pageTeam.getSuccess_button())
-        ).isDisplayed();
+        );
     }
 }

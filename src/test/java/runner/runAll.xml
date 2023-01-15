@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CicleStagging">
+    <test name="All">
+        <classes>
+            <class name="api.createcompanyAPI"></class>
+            <class name="api.createnullcompany"></class>
+            <class name="api.createteamAPI"></class>
+        </classes>
+    </test>
+</suite>

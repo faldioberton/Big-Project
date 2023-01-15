@@ -15,7 +15,7 @@ public class pageLogin {
     By check_box = By.xpath("//android.widget.CheckBox[@content-desc=\"Ready to be organised?\n" +
             "Don’t show me this introduction anymore\"]/android.widget.ImageView[1]");
 
-    By acc_1 = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[1]");
+    By acc_1 = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[2]");
 
     By btn_googleacc = By.xpath("//android.widget.ImageView[@content-desc='Sign in with Google Account']");
 
