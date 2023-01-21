@@ -5,7 +5,7 @@ import Directory.datafile;
 
 public class pageBoard {
     datafile datafile = new datafile();
-    By btn_board = By.xpath("//android.widget.ImageView[@content-desc=\"Board\"]");
+    By btn_board = By.xpath("//*[@content-desc=\"Board\"]");
     By field_list = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.widget.EditText");
     By btn_submit = By.xpath("//android.widget.Button[@content-desc=\"Submit\"]");
     By btn_list = By.xpath("//android.view.View[@content-desc=\"Project Besar\"]");
