@@ -1,4 +1,4 @@
-Feature: Board
+Feature: Card
 
   Scenario: Ensure user create card
     Given user in page Home

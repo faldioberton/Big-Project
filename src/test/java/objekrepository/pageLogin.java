@@ -9,7 +9,7 @@ public class pageLogin {
     By btn_skip = By.xpath("//android.view.View[@content-desc=\"Skip\"]");
     By page_home = By.xpath("//android.view.View[@content-desc=\"Sick of miscoordination?\"]");
     By btn_SignIn = By.xpath("//android.widget.Button[@content-desc=\"Go to Sign In\"]");
-
+    By logo_home = By.xpath("//android.widget.ImageView[@content-desc='logo']");
     By scroll_toSignIn = MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).setAsHorizontalList().scrollIntoView(textContains(\"Go to Sign In\"))");
 
     By check_box = By.xpath("//android.widget.CheckBox[@content-desc=\"Ready to be organised?\n" +
@@ -39,7 +39,9 @@ public class pageLogin {
     public By getBtn_skip() {
         return btn_skip;
     }
-
+    public By getLogo_home() {
+        return logo_home;
+    }
     public By getScroll_toSignIn() {
         return scroll_toSignIn;
     }

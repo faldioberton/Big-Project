@@ -1,6 +1,6 @@
 Feature: Board
 
-  Scenario: Ensure user add feature board
+  Scenario: Ensure user create new list
     Given user in page Home
     When user open ones company
     Then user in page Company

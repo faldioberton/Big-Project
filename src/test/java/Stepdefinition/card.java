@@ -35,7 +35,7 @@ public class card extends environment{
     public void user_successfully_create_card() {
         wait.until(
                 ExpectedConditions.visibilityOfElementLocated(pageCard.getBtn_successcard())
-        );
+        ).isDisplayed();
     }
 
 }

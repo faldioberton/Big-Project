@@ -1,2 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Sun Jan 15 09:57:26 WIB 2023","Sun Jan 15 09:57:31 WIB 2023","5052","Default Suite","StaggingCycle_Project","api.createcompanyAPI","api.createcompanyAPI","createCompany","createCompany",""

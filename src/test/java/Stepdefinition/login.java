@@ -22,12 +22,14 @@ public class login extends environment{
 
 
     public void user_click_yes() {
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(pageLogin.getBtn_yes())
+        );
         driver.findElement(pageLogin.getBtn_yes()).click();
     }
+    public void swipehorizontal() throws InterruptedException{
 
-
-    public void user_swipe_horizontal() throws InterruptedException {
-        scroll.swiperight(driver, 0.7, 0.7,0.5,0.5 );
+        scroll.swiperight(driver, 0.7, 0.,0.3,1.3 );
     }
 
     public void user_found_button_sign_in() {
@@ -39,10 +41,16 @@ public class login extends environment{
 
 
     public void user_click_sign_in() {
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(pageLogin.getBtn_SignIn())
+        );
         driver.findElement(pageLogin.getBtn_SignIn()).click();
     }
 
     public void user_click_sign_in_with_google_account() {
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(pageLogin.getBtn_googleacc())
+        );
         driver.findElement(pageLogin.getBtn_googleacc()).click();
        // wait.until(
          //       ExpectedConditions.visibilityOfElementLocated(pageLogin.getAcc_1())
@@ -50,6 +58,9 @@ public class login extends environment{
     }
 
     public void user_click_account_1_to_sign_in() {
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(pageLogin.getAcc_1())
+        );
         driver.findElement(pageLogin.getAcc_1()).click();
     }
 }

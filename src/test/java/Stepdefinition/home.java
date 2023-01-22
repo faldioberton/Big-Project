@@ -17,11 +17,14 @@ public class home extends environment{
     @Given("user in page Home")
     public void user_in_page_home() {
         wait.until(
-                ExpectedConditions.visibilityOfElementLocated(pageHome.getPage_home())
+                ExpectedConditions.visibilityOfElementLocated(pageHome.getPageHome())
         );
     }
     @When("user click Create New Company")
     public void user_click_create_new_company() {
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(pageHome.getBtn_createcompany())
+        );
         driver.findElement(pageHome.getBtn_createcompany()).click();
     }
     @And("user input field name")

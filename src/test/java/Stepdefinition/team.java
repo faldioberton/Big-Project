@@ -20,7 +20,6 @@ public class team extends environment{
     }
     @When("user open ones company")
     public void user_open_ones_company() {
-        driver.findElement(pageTeam.getBtn_company());
                 wait.until(
                         ExpectedConditions.elementToBeClickable(pageTeam.getBtn_company())
                         );

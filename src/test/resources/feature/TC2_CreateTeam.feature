@@ -1,6 +1,6 @@
 Feature: Create Team
 
-  Scenario: Ensure user create new company
+  Scenario: Ensure user create new team
     Given user in page Home
     When user open ones company
     Then user in page Company

@@ -19,7 +19,7 @@ public class hook extends environment{
         capabilities.setCapability("udid", "bfb80eb1");
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("app", "C:/Users/asus/Desktop/stagging.apk");
-        capabilities.setCapability("platformVersion", "11");
+        capabilities.setCapability("platformVersion", "10");
         capabilities.setCapability("appPackage", "staging.cicle");
         capabilities.setCapability("appActivity", "staging.cicle.MainActivity");
 
@@ -29,7 +29,6 @@ public class hook extends environment{
         wait = new WebDriverWait(driver, duration);
         login.user_in_home_page();
         login.user_click_yes();
-        login.user_swipe_horizontal();
         login.user_found_button_sign_in();
         login.user_click_check_box();
         login.user_click_sign_in();
@@ -39,6 +38,6 @@ public class hook extends environment{
 
      @After
      public void after(){
-       driver.quit();
+      // driver.quit();
      }
 }
