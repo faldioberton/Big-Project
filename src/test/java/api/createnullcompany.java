@@ -27,7 +27,7 @@ public class createnullcompany {
                 .post("/api/v1/companies")
                 .then()
                 .log().body()
-                .statusCode(200)
+                .statusCode(404)
                 .extract()
                 .response();
 

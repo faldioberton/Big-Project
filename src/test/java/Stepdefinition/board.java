@@ -1,11 +1,10 @@
 package Stepdefinition;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import objekrepository.pageBoard;
 import objekrepository.pageLogin;
-import objekrepository.pageTeam;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import config.environment;
 

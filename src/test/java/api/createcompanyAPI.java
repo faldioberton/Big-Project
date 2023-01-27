@@ -7,8 +7,6 @@ import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.util.List;
 import java.util.Random;
 
 import static io.restassured.RestAssured.given;
@@ -47,8 +45,6 @@ public class createcompanyAPI {
         JsonPath responseParsed = response.jsonPath();
         companyId = responseParsed.getString("newCompany._id");
         System.out.println(companyId);
-       // List companyList = responseParsed.getList("companies");
-      //  return responseParsed.getString("companies[" +(companyList.size()-1) + "]._id");
 
     }
     @Test(priority = 2)
@@ -121,7 +117,36 @@ public class createcompanyAPI {
 
 
         JsonPath responseParsed = response.jsonPath();
-        listId = responseParsed.getString("board.lists._id");
+        listId = responseParsed.getString("board.lists[0]._id");
         System.out.println(listId);
+    }
+    @Test (priority = 5)
+    public void createCard() {
+        String CardId =  "";
+        JSONObject selector  = new JSONObject();
+        selector.put("boardId", boardId);
+        selector.put("listId", listId);
+        JSONObject data = new JSONObject();
+        String cardname = "Card" + rand.nextInt(1000);
+        data.put("name", cardname);
+        data.put("isPublic", true);
+        payload.put("selector", selector);
+        payload.put("data", data);
+
+        Response response = given()
+                .when()
+                .header("Content-Type", "application/json")
+                .header("Authorization", token)
+                .body(payload.toJSONString())
+                .post("/api/v1/cards/?companyId=" +companyId)
+                .then()
+                .log().body()
+                .statusCode(200)
+                .extract()
+                .response();
+
+        JsonPath responseParsed = response.jsonPath();
+        CardId = responseParsed.getString("data._id");
+        System.out.println(CardId);
     }
 }
