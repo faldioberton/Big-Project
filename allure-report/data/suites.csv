@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Jan 23 19:46:48 WIB 2023","Mon Jan 23 19:46:49 WIB 2023","193","Default Suite","StaggingCycle_Project","api.createcompanyAPI","api.createcompanyAPI","createCard","createCard",""
+"passed","Mon Jan 23 19:46:48 WIB 2023","Mon Jan 23 19:46:48 WIB 2023","276","Default Suite","StaggingCycle_Project","api.createcompanyAPI","api.createcompanyAPI","UsercreateTeam","UsercreateTeam",""
+"passed","Mon Jan 23 19:46:42 WIB 2023","Mon Jan 23 19:46:48 WIB 2023","5423","Default Suite","StaggingCycle_Project","api.createcompanyAPI","api.createcompanyAPI","createCompany","createCompany",""
+"passed","Mon Jan 23 19:46:48 WIB 2023","Mon Jan 23 19:46:48 WIB 2023","197","Default Suite","StaggingCycle_Project","api.createcompanyAPI","api.createcompanyAPI","getlist","getlist",""
+"passed","Mon Jan 23 19:46:48 WIB 2023","Mon Jan 23 19:46:48 WIB 2023","141","Default Suite","StaggingCycle_Project","api.createcompanyAPI","api.createcompanyAPI","CreateList","CreateList",""
